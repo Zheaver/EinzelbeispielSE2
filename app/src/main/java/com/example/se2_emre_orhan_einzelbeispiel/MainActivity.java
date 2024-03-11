@@ -48,11 +48,38 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickPrimeNumbers(View view) {
         String matriculationNumber = Studentnumber.getText().toString();
-
+        String primeNumbers = extractPrimeNumbers(matriculationNumber);
+        TextViewReceivedData.setText(primeNumbers);
 
     }
 
+    private String extractPrimeNumbers(String input) {
+        StringBuilder primes = new StringBuilder();
 
+        for (int i = 0; i < input.length(); i++) {
+            char currentChar = input.charAt(i);
+
+            if (isPrime(Character.getNumericValue(currentChar))) {
+                primes.append(currentChar);
+            }
+        }
+
+        return primes.toString();
+    }
+
+    private boolean isPrime(int number) {
+        if (number <= 1) {
+            return false;
+        }
+
+        for (int i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i == 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
 
     private void sendToServer(final String matriculationNumber) {
         new Thread(new Runnable() {
