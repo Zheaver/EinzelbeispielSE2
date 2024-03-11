@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/material_dynamic_neutral90"
     tools:context=".MainActivity">
 
 
@@ -12,12 +13,10 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="100dp"
         android:text="Gib deine Matrikelnummer ein"
-
-        android:textColorHint="#833030"
-        android:textColorLink="#653F3F"
+        android:textColor="@color/black"
         android:textSize="25sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -27,58 +26,60 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="100dp"
-        android:layout_marginBottom="530dp"
+        android:layout_marginBottom="500dp"
         android:ems="10"
         android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="92dp"
-        android:layout_marginBottom="500dp"
+        android:layout_marginEnd="95dp"
+        android:layout_marginBottom="450dp"
         android:text="Antwort vom Server"
         android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
     <Button
         android:id="@+id/buttonClientConnect"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="452dp"
-        android:background="@color/cardview_dark_background"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="480dp"
+        android:background="@color/material_dynamic_neutral50"
         android:onClick="onClick"
         android:text="Abschicken"
         android:textSize="25sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/textviewRectxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="234dp"
+        android:layout_height="107dp"
         android:layout_marginStart="170dp"
         android:layout_marginTop="388dp"
         android:layout_marginEnd="164dp"
         android:layout_marginBottom="316dp"
-        android:textSize="20sp"
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="225dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="500dp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="550dp"
+        android:background="@color/material_dynamic_neutral70"
         android:onClick="onClickPrimeNumbers"
-        android:text="PrimeNumbers"
+        android:text="Primzahlen"
         android:textSize="25sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
